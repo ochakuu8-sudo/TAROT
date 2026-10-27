@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>タロット</title>
+  <meta name="description" content="78枚のタロットから正位置・逆位置つきで均等にランダムで引けるシンプルなアプリ">
+  <meta name="theme-color" content="#12101f">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="タロット">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <h1 class="title">TAROT</h1>
+      <nav id="spreads" class="spreads" aria-label="スプレッド"></nav>
+    </header>
+
+    <main>
+      <section id="board" class="board" aria-hidden="true"></section>
+      <p id="hint" class="hint" hidden>十字の中央をタップすると1枚目が見えます</p>
+
+      <section id="result" class="result" hidden aria-label="結果">
+        <ol id="list" class="list"></ol>
+        <button id="copy" class="btn btn-copy" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></svg>
+          <span class="label">結果をコピー</span>
+        </button>
+      </section>
+
+      <p class="note">78枚から重複なしで抽選・正逆はそれぞれ1/2</p>
+    </main>
+  </div>
+
+  <footer class="bar">
+    <button id="draw" class="btn btn-draw" type="button">カードを引く</button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
